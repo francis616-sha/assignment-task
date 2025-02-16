@@ -1,0 +1,23 @@
+.banner {
+    width: 100%;
+    padding: 15px 20px;
+    background: linear-gradient(to right, #222, #ff5f5f);
+    color: white;
+    font-size: 18px;
+    border-radius: 8px;
+  }
+  .banner h2 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: bold;
+  }
+  .banner p {
+    margin: 5px 0 0;
+    font-size: 16px;
+  }
+  .banner a {
+    font-weight: bold;
+    color: white;
+    text-decoration: underline;
+  }
+  
