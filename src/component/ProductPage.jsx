@@ -31,21 +31,21 @@ const ProductListing = () => {
             })
             .catch((error) => {
                 console.error("Error fetching products:", error);
-                setProducts([]); // Ensure empty array if there's an error
+                setProducts([]); 
             })
             .finally(() => {
                 setLoading(false);
             });
 
-    }, [selectedCategory]); // Fetch products whenever category changes
+    }, [selectedCategory]); 
 
 
     useEffect(() => {
-        axiosInstance.get("/products") // Replace with actual API endpoint
+        axiosInstance.get("/products") 
             .then((response) => {
                 console.log("value", response.data)
                 if (response?.data?.products) {
-                    setProducts(response.data.products);  // ✅ Updating state with API data
+                    setProducts(response.data.products);  
                     setLoading(false);
                 }
             })
@@ -63,15 +63,15 @@ const ProductListing = () => {
             .then((response) => {
 
                 if (response?.data?.products) {
-                    setProducts(response.data.products);  // ✅ Updating state with API data
+                    setProducts(response.data.products); 
                     setLoading(false);
                 } else {
-                    //   setProducts([]); // Fallback in case no products are found
+                    
                 }
             })
             .catch((error) => {
                 console.error("Error fetching products:", error);
-                setProducts([]); // Ensure empty array if there's an error
+                setProducts([]); 
             })
             .finally(() => {
                 setLoading(false);
@@ -84,15 +84,15 @@ const ProductListing = () => {
             .then((response) => {
 
                 if (response?.data?.products) {
-                    setProducts(response.data.products);  // ✅ Updating state with API data
+                    setProducts(response.data.products);  
                     setLoading(false);
                 } else {
-                    //   setProducts([]); // Fallback in case no products are found
+                   
                 }
             })
             .catch((error) => {
                 console.error("Error fetching products:", error);
-                setProducts([]); // Ensure empty array if there's an error
+                setProducts([]); 
             })
             .finally(() => {
                 setLoading(false);
@@ -106,7 +106,7 @@ const ProductListing = () => {
     
     return (
         <Container fluid className="p-3">
-            {/* Header */}
+           
             <header className="d-flex flex-wrap justify-content-between align-items-center mb-3">
                 <h2 className="fw-bold">
                     <span style={{ color: "#E91E63" }}>MoBoo</span>M
@@ -124,7 +124,7 @@ const ProductListing = () => {
 
            <Banner/>
 
-            {/* Category Dropdown */}
+            
             <Row>
                 <Col xs={12} md={3} className="mb-3">
                     <Dropdown>
@@ -142,7 +142,7 @@ const ProductListing = () => {
                 </Col>
             </Row>
 
-            {/* Product Grid */}
+           
             <Row>
           {currentProducts.map((product) => (
             <Col xs={6} sm={6} md={4} lg={3} key={product.id} className="mb-4">
@@ -153,9 +153,9 @@ const ProductListing = () => {
                   <Card.Text className="d-none d-sm-flex" 
                     style={{
                          display: "block",
-                         whiteSpace: "nowrap",  // Prevents text from wrapping
-                         overflow: "hidden",    // Hides overflowed text
-                         textOverflow: "ellipsis", // Adds "..." when text is cut off
+                         whiteSpace: "nowrap",  
+                         overflow: "hidden",    
+                         textOverflow: "ellipsis", 
                       }}>
                     {product.description}</Card.Text>
                   <h5>{product.price}</h5>
@@ -197,7 +197,7 @@ const ProductListing = () => {
         </Col>
       </Row>
 
-            {/* Footer */}
+           
             <footer className="mt-4 text-center">
                 <Row>
                     <Col md={3}>
@@ -221,7 +221,7 @@ const ProductListing = () => {
                     </Col>
                 </Row>
 
-                {/* Subscribe Form */}
+                
                 <Row className="mt-3">
                     <Col className="text-center">
                         <Form.Control type="email" placeholder="Your email" className="w-50 mx-auto" />
@@ -229,7 +229,7 @@ const ProductListing = () => {
                     </Col>
                 </Row>
 
-                {/* Payment Methods */}
+                
                 <Row className="text-center mt-3">
                     <Col>
                         <SiVisa size={40} className="mx-2" />

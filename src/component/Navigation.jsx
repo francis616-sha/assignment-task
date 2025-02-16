@@ -6,16 +6,16 @@ const Navigation = () => {
   return (
     <nav>
 
-      {/* Normal View (Desktop & Tablet) */}
+     
       <div className="d-none d-md-flex">
-        <Button variant="link" style={{ color: "#666666" }}>Store</Button>  {/* Light Black */}
+        <Button variant="link" style={{ color: "#666666" }}>Store</Button>  
         <Button variant="link" style={{ color: "#666666" }}>Account</Button>
         <Button variant="link" style={{ color: "#666666" }}>Wish List</Button>
-        <Button variant="link" style={{ fontWeight: "bold", color: "#000000" }}>Basket 🛒</Button>  {/* Bold Black */}
+        <Button variant="link" style={{ fontWeight: "bold", color: "#000000" }}>Basket 🛒</Button>  
       </div>
 
 
-      {/* Mobile View (Dropdown) */}
+      
       <div className="d-flex d-md-none">
         <Dropdown>
           <Dropdown.Toggle variant="dark" id="nav-dropdown">
